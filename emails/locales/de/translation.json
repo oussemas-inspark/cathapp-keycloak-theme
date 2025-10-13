@@ -1,0 +1,104 @@
+{
+    "email-test": {
+        "subject": "E-Mail-Test",
+        "greeting": "Hallo",
+        "passwordUpdate": "Sie haben Ihr Passwort für Ihr {{realmName}}-Konto am {{date}} geändert. Wenn Sie diese Änderung vorgenommen haben, ist keine weitere Aktion erforderlich.",
+        "passwordReset": "Wenn Sie diese Änderung jedoch nicht vorgenommen haben, setzen Sie bitte Ihr Passwort sofort zurück.",
+        "passwordAdvice": "Denken Sie daran, ein starkes und einzigartiges Passwort für Ihr {{realmName}}-Konto zu verwenden. Weitere Informationen zum Erstellen eines sicheren Passworts finden Sie hier:",
+        "loginButton": "Bei Inspark anmelden",
+        "contactSupport": "Haben Sie noch Fragen? Bitte wenden Sie sich an den Support von {{realmName}}.",
+        "thanks": "Vielen Dank,",
+        "supportTeam": "Ihr {{realmName}} Support-Team"
+    },
+    "email-update-confirmation": {
+        "subject": "Bestätigung der neuen E-Mail-Adresse",
+        "linkExpiration": "Dieser Link läuft in {{expiration}} ab.",
+        "updateEmailAddress": "Um Ihr Konto bei {{realmName}} mit der neuen E-Mail-Adresse {{newEmail}} zu aktualisieren,",
+        "clickLinkBelow": "klicken Sie bitte auf den untenstehenden Link.",
+        "updateEmail": "E-Mail aktualisieren",
+        "ignoreMessage": "Wenn Sie diese Änderung nicht vornehmen möchten, ignorieren Sie einfach diese Nachricht."
+    },
+    "email-verification": {
+        "subject": "E-Mail-Bestätigung",
+        "message": "Ein Konto für {{firstName}} wurde mit dieser E-Mail-Adresse erstellt. Wenn Sie dieses Konto erstellt haben, klicken Sie auf den untenstehenden Link, um Ihre E-Mail-Adresse zu bestätigen.",
+        "verifyButton": "E-Mail bestätigen",
+        "linkExpiration": "Dieser Link läuft in {{expiration}} ab.",
+        "ignoreMessage": "Wenn Sie dieses Konto nicht erstellt haben, ignorieren Sie einfach diese Nachricht."
+    },
+    "event-login_error": {
+        "subject": "Anmeldefehler",
+        "message": "Ein fehlgeschlagener Anmeldeversuch für Ihr Konto wurde am {{date}} von der IP-Adresse {{ipAddress}} festgestellt.",
+        "contactAdmin": "Wenn Sie dies nicht waren, wenden Sie sich bitte an den Administrator."
+    },
+    "event-remove_credential": {
+        "subject": "Anmeldeinformationen entfernt",
+        "message": "Die Anmeldeinformationen {{credentialType}} wurden am {{date}} von der IP-Adresse {{ipAddress}} aus Ihrem Konto entfernt.",
+        "contactAdmin": "Wenn Sie dies nicht waren, wenden Sie sich bitte an den Administrator."
+    },
+    "event-remove_totp": {
+        "subject": "OTP entfernt",
+        "message": "Das Einmalpasswort (OTP) wurde am {{date}} von der IP-Adresse {{ipAddress}} aus Ihrem Konto entfernt.",
+        "contactAdmin": "Wenn Sie dies nicht waren, wenden Sie sich bitte an den Administrator."
+    },
+    "event-update_credential": {
+        "subject": "Anmeldeinformationen aktualisiert",
+        "message": "Ihre Anmeldeinformationen {{credentialType}} wurden am {{date}} von der IP-Adresse {{ipAddress}} geändert.",
+        "contactAdmin": "Wenn Sie dies nicht waren, wenden Sie sich bitte an den Administrator."
+    },
+    "event-update_password": {
+        "subject": "Passwortaktualisierung",
+        "message": "Ihr Passwort wurde am {{date}} von der IP-Adresse {{ipAddress}} geändert.",
+        "contactAdmin": "Wenn Sie dies nicht waren, wenden Sie sich bitte an den Administrator."
+    },
+    "event-update_totp": {
+        "subject": "OTP aktualisiert",
+        "message": "Ihr Einmalpasswort (OTP) wurde am {{date}} von der IP-Adresse {{ipAddress}} aktualisiert.",
+        "contactAdmin": "Wenn Sie dies nicht waren, wenden Sie sich bitte an den Administrator."
+    },
+    "event-user_disabled_by_permanent_lockout": {
+        "subject": "Benutzer dauerhaft gesperrt",
+        "message": "Ihr Benutzerkonto wurde am {{date}} aufgrund mehrerer fehlgeschlagener Anmeldeversuche dauerhaft gesperrt.",
+        "contactAdmin": "Bitte wenden Sie sich an den Administrator."
+    },
+    "event-user_disabled_by_temporary_lockout": {
+        "subject": "Benutzer vorübergehend gesperrt",
+        "message": "Ihr Benutzerkonto wurde am {{date}} aufgrund mehrerer fehlgeschlagener Anmeldeversuche vorübergehend gesperrt.",
+        "contactAdmin": "Bitte wenden Sie sich an den Administrator."
+    },
+    "executeActions": {
+        "subject": "Aktualisieren Sie Ihr Konto",
+        "message": "Ihr Administrator hat angefordert, Ihr {{realmName}}-Konto zu aktualisieren, indem Sie die folgenden Aktionen ausführen:",
+        "clickLink": "Klicken Sie auf den untenstehenden Link, um diesen Vorgang zu starten.",
+        "linkExpiration": "Dieser Link läuft in {{expiration}} ab.",
+        "ignoreMessage": "Wenn Sie diese Anfrage nicht erwartet haben, ignorieren Sie bitte diese Nachricht. Es werden keine Änderungen vorgenommen.",
+        "updateAccountButton": "Konto aktualisieren"
+    },
+    "identity-provider-link": {
+        "subject": "Verknüpfung mit Ihrem {0}-Konto",
+        "message": "Jemand möchte Ihr {{identityProviderDisplayName}}-Konto mit dem {{realmName}}-Konto von Benutzer {{username}} verknüpfen.",
+        "clickLink": "Wenn Sie dies waren, klicken Sie auf den untenstehenden Link, um die Konten zu verknüpfen.",
+        "linkExpiration": "Dieser Link läuft in {{expiration}} ab.",
+        "ignoreMessage": "Wenn Sie diese Änderung nicht vornehmen möchten, ignorieren Sie einfach diese Nachricht.",
+        "linkAccountsButton": "Konten verknüpfen",
+        "loginInfo": "Nach der Verknüpfung können Sie sich bei {{identityProviderDisplayName}} über {{realmName}} anmelden."
+    },
+    "org-invite": {
+        "subject": "Einladung zum Beitritt zur Organisation {0}",
+        "greeting": "Hallo, {{firstName}} {{lastName}}.",
+        "message": "Sie wurden eingeladen, der Organisation {{organizationName}} beizutreten. Klicken Sie auf den untenstehenden Link, um beizutreten.",
+        "linkExpiration": "Dieser Link läuft in {{expiration}} ab.",
+        "ignoreMessage": "Wenn Sie der Organisation nicht beitreten möchten, ignorieren Sie bitte diese Nachricht.",
+        "joinButton": "Organisation beitreten"
+    },
+    "password-reset": {
+        "subject": "Passwort zurücksetzen",
+        "message": "Jemand hat angefordert, die Anmeldeinformationen Ihres {{realmName}}-Kontos zu ändern. Wenn Sie dies waren, klicken Sie auf den untenstehenden Link, um sie zurückzusetzen.",
+        "linkExpiration": "Dieser Link läuft in {{expiration}} ab.",
+        "ignoreMessage": "Wenn Sie Ihre Anmeldeinformationen nicht zurücksetzen möchten, ignorieren Sie bitte diese Nachricht. Es werden keine Änderungen vorgenommen.",
+        "resetButton": "Anmeldeinformationen zurücksetzen"
+    },
+    "footer": {
+        "allRightsReserved": "© {{currentYear}} {{realmName}}, alle Rechte vorbehalten",
+        "address": "7 Rue de Lille, Bizerte, 1053, Tunis, Tunesien"
+    }
+}

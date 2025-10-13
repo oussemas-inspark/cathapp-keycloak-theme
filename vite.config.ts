@@ -12,10 +12,10 @@ export default defineConfig({
         tailwindcss(),
         keycloakify({
             accountThemeImplementation: "none",
-            themeName: "planingo-theme",
+            themeName: "cathapp-theme",
             keycloakVersionTargets: {
                 "22-to-25": false,
-                "all-other-versions": "planingo-theme.jar"
+                "all-other-versions": "cathapp-theme.jar"
             },
             environmentVariables: [{ name: "ENABLE_THEME_TOGGLE", default: "true" }],
             postBuild: async buildContext => {
@@ -24,7 +24,7 @@ export default defineConfig({
                     themeNames: buildContext.themeNames,
                     keycloakifyBuildDirPath: buildContext.keycloakifyBuildDirPath,
                     i18nSourceFile: import.meta.dirname + "/emails/i18n.ts",
-                    locales: ["en", "fr", "ar"],
+                    locales: ["en", "fr", "de"],
                     cwd: import.meta.dirname,
                     esbuild: {}
                 });

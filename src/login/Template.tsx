@@ -162,7 +162,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                 </div>
             </div>
 
-            <div className="bg-blue-950 relative hidden lg:block dark:bg-white/5">
+            <div className="bg-teal-950 relative hidden lg:block dark:bg-white/5">
                 <div className="flex items-center pt-20 h-full justify-center z-1">
                     <div className="absolute right-0 top-0 w-full max-w-[250px] xl:max-w-[450px]">
                         <img src={shape} alt="grid" />
@@ -173,7 +173,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
 
                     <div className="flex justify-center my-auto flex-col items-center max-w-xs">
                         <a className="block mb-4">
-                            <img width="231" height="48" src={companylogo} alt="Logo" />
+                            <img src={companylogo} alt="Logo" />
                         </a>
                         <p className="text-center  text-gray-400 dark:text-white/60">{msg("welcomeMessage")}</p>
                     </div>

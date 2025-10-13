@@ -1,4 +1,4 @@
-export const primaryColor = "#2196F3";
+export const primaryColor = "#0BAB7C";
 
 export const btnTextColor = "#ffffff";
 

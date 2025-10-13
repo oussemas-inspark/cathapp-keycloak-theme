@@ -2,7 +2,7 @@ import i18n from "i18next";
 import { GetMessages } from "keycloakify-emails";
 import { initReactI18next } from "react-i18next";
 
-import arTranslation from "./locales/ar/translation.json";
+import deTranslation from "./locales/de/translation.json";
 import enTranslation from "./locales/en/translation.json";
 import frTranslation from "./locales/fr/translation.json";
 
@@ -13,8 +13,8 @@ const resources = {
     fr: {
         translation: frTranslation
     },
-    ar: {
-        translation: arTranslation
+    de: {
+        translation: deTranslation
     }
 };
 
@@ -37,23 +37,24 @@ export default i18n;
  * flexibility to initialize theirs own i18n solution here
  */
 export const getMessages: GetMessages = props => {
-    if (props.locale === "ar") {
+    if (props.locale === "de") {
         return {
-            "requiredAction.CONFIGURE_TOTP": "تكوين OTP",
-            "requiredAction.TERMS_AND_CONDITIONS": "الشروط والأحكام",
-            "requiredAction.UPDATE_PASSWORD": "تحديث كلمة المرور",
-            "requiredAction.UPDATE_PROFILE": "تحديث الملف الشخصي",
-            "requiredAction.VERIFY_EMAIL": "تأكيد البريد الإلكتروني",
-            "requiredAction.CONFIGURE_RECOVERY_AUTHN_CODES": "توليد رموز الاسترداد",
+            "requiredAction.CONFIGURE_TOTP": "OTP konfigurieren",
+            "requiredAction.TERMS_AND_CONDITIONS": "Allgemeine Geschäftsbedingungen",
+            "requiredAction.UPDATE_PASSWORD": "Passwort aktualisieren",
+            "requiredAction.UPDATE_PROFILE": "Profil aktualisieren",
+            "requiredAction.VERIFY_EMAIL": "E-Mail-Adresse bestätigen",
+            "requiredAction.CONFIGURE_RECOVERY_AUTHN_CODES":
+                "Wiederherstellungscodes generieren",
 
             "linkExpirationFormatter.timePeriodUnit.seconds":
-                "{0,choice,0#ثواني|1#ثانية|1<ثواني}",
+                "{0,choice,0#Sekunden|1#Sekunde|1<Sekunden}",
             "linkExpirationFormatter.timePeriodUnit.minutes":
-                "{0,choice,0#دقائق|1#دقيقة|1<دقائق}",
+                "{0,choice,0#Minuten|1#Minute|1<Minuten}",
             "linkExpirationFormatter.timePeriodUnit.hours":
-                "{0,choice,0#ساعات|1#ساعة|1<ساعات}",
+                "{0,choice,0#Stunden|1#Stunde|1<Stunden}",
             "linkExpirationFormatter.timePeriodUnit.days":
-                "{0,choice,0#أيام|1#يوم|1<أيام}"
+                "{0,choice,0#Tage|1#Tag|1<Tage}"
         };
     } else if (props.locale === "fr") {
         return {
