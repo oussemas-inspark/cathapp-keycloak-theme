@@ -1,0 +1,104 @@
+{
+    "email-test": {
+        "subject": "Test email",
+        "greeting": "Ciao",
+        "passwordUpdate": "Hai aggiornato la password del tuo account Twitch il {{date}}. Se sei stato tu, non è necessaria alcuna azione ulteriore.",
+        "passwordReset": "Tuttavia, se NON hai effettuato questa modifica della password, reimposta immediatamente la password del tuo account.",
+        "passwordAdvice": "Ricorda di utilizzare una password sicura e univoca per il tuo account Twitch. Per saperne di più su come creare una password sicura e univoca,",
+        "loginButton": "Accedi a Inspark",
+        "contactSupport": "Hai ancora domande? Contatta il supporto di {{realmName}}",
+        "thanks": "Grazie,",
+        "supportTeam": "Team di supporto {{realmName}}"
+    },
+    "email-update-confirmation": {
+        "subject": "Verifica nuova email",
+        "linkExpiration": " Questo link scadrà entro {{expiration}}.",
+        "updateEmailAddress": "Per aggiornare il tuo account {{realmName}} con l'indirizzo email {{newEmail}}",
+        "clickLinkBelow": "clicca sul link qui sotto",
+        "updateEmail": "Aggiorna email",
+        "ignoreMessage": "Se non desideri procedere con questa modifica, ignora semplicemente questo messaggio."
+    },
+    "email-verification": {
+        "subject": "Verifica email",
+        "message": "Qualcuno ha creato un account {{firstName}} con questo indirizzo email. Se sei stato tu, clicca sul link qui sotto per verificare il tuo indirizzo email.",
+        "verifyButton": "Verifica email",
+        "linkExpiration": "Questo link scadrà entro {{expiration}}.",
+        "ignoreMessage": "Se non hai creato questo account, ignora semplicemente questo messaggio."
+    },
+    "event-login_error": {
+        "subject": "Errore di accesso",
+        "message": "È stato rilevato un tentativo di accesso fallito al tuo account il {{date}} da {{ipAddress}}.",
+        "contactAdmin": "Se non sei stato tu, contatta un amministratore."
+    },
+    "event-remove_credential": {
+        "subject": "Rimuovi credenziale",
+        "message": "La credenziale {{credentialType}} è stata rimossa dal tuo account il {{date}} da {{ipAddress}}.",
+        "contactAdmin": "Se non sei stato tu, contatta un amministratore."
+    },
+    "event-remove_totp": {
+        "subject": "Rimuovi OTP",
+        "message": "OTP è stato rimosso dal tuo account il {{date}} da {{ipAddress}}.",
+        "contactAdmin": "Se non sei stato tu, contatta un amministratore."
+    },
+    "event-update_credential": {
+        "subject": "Aggiorna credenziale",
+        "message": "La tua credenziale {{credentialType}} è stata modificata il {{date}} da {{ipAddress}}.",
+        "contactAdmin": "Se non sei stato tu, contatta un amministratore."
+    },
+    "event-update_password": {
+        "subject": "Aggiorna password",
+        "message": "La tua password è stata modificata il {{date}} da {{ipAddress}}.",
+        "contactAdmin": "Se non sei stato tu, contatta un amministratore."
+    },
+    "event-update_totp": {
+        "subject": "Aggiorna OTP",
+        "message": "OTP è stato aggiornato per il tuo account il {{date}} da {{ipAddress}}.",
+        "contactAdmin": "Se non sei stato tu, contatta un amministratore."
+    },
+    "event-user_disabled_by_permanent_lockout": {
+        "subject": "Utente disabilitato da blocco permanente",
+        "message": "Il tuo utente è stato disabilitato permanentemente a causa di molteplici tentativi falliti il {{date}}.",
+        "contactAdmin": "Contatta un amministratore."
+    },
+    "event-user_disabled_by_temporary_lockout": {
+        "subject": "Utente disabilitato da blocco temporaneo",
+        "message": "Il tuo utente è stato disabilitato temporaneamente a causa di molteplici tentativi falliti il {{date}}.",
+        "contactAdmin": "Contatta un amministratore."
+    },
+    "executeActions": {
+        "subject": "Aggiorna il tuo account",
+        "message": "Il tuo amministratore ha appena richiesto di aggiornare il tuo account {{realmName}} eseguendo le seguenti azioni:",
+        "clickLink": "Clicca sul link qui sotto per avviare questo processo.",
+        "linkExpiration": "Questo link scadrà entro {{expiration}}.",
+        "ignoreMessage": "Se non sei a conoscenza che il tuo amministratore ha richiesto ciò, ignora semplicemente questo messaggio e nulla verrà modificato.",
+        "updateAccountButton": "Aggiorna account"
+    },
+    "identity-provider-link": {
+        "subject": "Collega {0} con il tuo account",
+        "message": "Qualcuno vuole collegare il tuo account {{identityProviderDisplayName}} con l'account {{realmName}} dell'utente {{username}}.",
+        "clickLink": "Se sei stato tu, clicca sul link qui sotto per collegare gli account",
+        "linkExpiration": "Questo link scadrà entro {{expiration}}.",
+        "ignoreMessage": "Se non desideri procedere con questa modifica, ignora semplicemente questo messaggio.",
+        "linkAccountsButton": "Collega account",
+        "loginInfo": "Se colleghi gli account, potrai accedere a {{identityProviderDisplayName}} tramite {{realmName}}."
+    },
+    "org-invite": {
+        "subject": "Invito a unirsi all'organizzazione {0}",
+        "greeting": "Ciao, {{firstName}} {{lastName}}.",
+        "message": "Sei stato invitato a unirti all'organizzazione {{organizationName}}. Clicca sul link qui sotto per unirti.",
+        "linkExpiration": "Questo link scadrà entro {{expiration}}.",
+        "ignoreMessage": "Se non desideri unirti all'organizzazione, ignora semplicemente questo messaggio.",
+        "joinButton": "Unisciti all'organizzazione"
+    },
+    "password-reset": {
+        "subject": "Reimposta password",
+        "message": "Qualcuno ha appena richiesto di modificare le credenziali del tuo account {{realmName}}. Se sei stato tu, clicca sul link qui sotto per reimpostarle.",
+        "linkExpiration": "Questo link scadrà entro {{expiration}}.",
+        "ignoreMessage": "Se non desideri reimpostare le tue credenziali, ignora semplicemente questo messaggio e nulla verrà modificato.",
+        "resetButton": "Reimposta credenziali"
+    },
+    "footer": {
+        "allRightsReserved": "© {{currentYear}} {{realmName}}, Tutti i diritti riservati",
+        "address": "Via Isola di Biserta 7, 1053, Tunisi, Tunisia"
+    }
+}

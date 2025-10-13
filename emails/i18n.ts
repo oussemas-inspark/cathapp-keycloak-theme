@@ -4,7 +4,9 @@ import { initReactI18next } from "react-i18next";
 
 import deTranslation from "./locales/de/translation.json";
 import enTranslation from "./locales/en/translation.json";
+import esTranslation from "./locales/es/translation.json";
 import frTranslation from "./locales/fr/translation.json";
+import itTranslation from "./locales/it/translation.json";
 
 const resources = {
     en: {
@@ -15,6 +17,12 @@ const resources = {
     },
     de: {
         translation: deTranslation
+    },
+    es: {
+        translation: esTranslation
+    },
+    it: {
+        translation: itTranslation
     }
 };
 
@@ -74,6 +82,43 @@ export const getMessages: GetMessages = props => {
                 "{0,choice,0#heures|1#heure|1<heures}",
             "linkExpirationFormatter.timePeriodUnit.days":
                 "{0,choice,0#jours|1#jour|1<jours}"
+        };
+    } else if (props.locale === "es") {
+        return {
+            "requiredAction.CONFIGURE_TOTP": "Configurar OTP",
+            "requiredAction.TERMS_AND_CONDITIONS": "Términos y condiciones",
+            "requiredAction.UPDATE_PASSWORD": "Actualizar contraseña",
+            "requiredAction.UPDATE_PROFILE": "Actualizar perfil",
+            "requiredAction.VERIFY_EMAIL": "Verificar correo electrónico",
+            "requiredAction.CONFIGURE_RECOVERY_AUTHN_CODES":
+                "Generar códigos de recuperación",
+
+            "linkExpirationFormatter.timePeriodUnit.seconds":
+                "{0,choice,0#segundos|1#segundo|1<segundos}",
+            "linkExpirationFormatter.timePeriodUnit.minutes":
+                "{0,choice,0#minutos|1#minuto|1<minutos}",
+            "linkExpirationFormatter.timePeriodUnit.hours":
+                "{0,choice,0#horas|1#hora|1<horas}",
+            "linkExpirationFormatter.timePeriodUnit.days":
+                "{0,choice,0#días|1#día|1<días}"
+        };
+    } else if (props.locale === "it") {
+        return {
+            "requiredAction.CONFIGURE_TOTP": "Configura OTP",
+            "requiredAction.TERMS_AND_CONDITIONS": "Termini e condizioni",
+            "requiredAction.UPDATE_PASSWORD": "Aggiorna password",
+            "requiredAction.UPDATE_PROFILE": "Aggiorna profilo",
+            "requiredAction.VERIFY_EMAIL": "Verifica email",
+            "requiredAction.CONFIGURE_RECOVERY_AUTHN_CODES": "Genera codici di recupero",
+
+            "linkExpirationFormatter.timePeriodUnit.seconds":
+                "{0,choice,0#secondi|1#secondo|1<secondi}",
+            "linkExpirationFormatter.timePeriodUnit.minutes":
+                "{0,choice,0#minuti|1#minuto|1<minuti}",
+            "linkExpirationFormatter.timePeriodUnit.hours":
+                "{0,choice,0#ore|1#ora|1<ore}",
+            "linkExpirationFormatter.timePeriodUnit.days":
+                "{0,choice,0#giorni|1#giorno|1<giorni}"
         };
     } else {
         return {

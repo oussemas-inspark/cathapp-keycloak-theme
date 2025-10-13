@@ -1,0 +1,104 @@
+{
+    "email-test": {
+        "subject": "Prueba de correo electrónico",
+        "greeting": "Hola",
+        "passwordUpdate": "Actualizaste la contraseña de tu cuenta de Twitch el {{date}}. Si fuiste tú, no es necesaria ninguna acción adicional.",
+        "passwordReset": "Sin embargo, si NO realizaste este cambio de contraseña, restablece la contraseña de tu cuenta de inmediato.",
+        "passwordAdvice": "Recuerda usar una contraseña que sea segura y única para tu cuenta de Twitch. Para obtener más información sobre cómo crear una contraseña segura y única,",
+        "loginButton": "Iniciar sesión en Inspark",
+        "contactSupport": "¿Aún tienes preguntas? Contacta con el soporte de {{realmName}}",
+        "thanks": "Gracias,",
+        "supportTeam": "Equipo de soporte de {{realmName}}"
+    },
+    "email-update-confirmation": {
+        "subject": "Verificar nuevo correo electrónico",
+        "linkExpiration": " Este enlace caducará en {{expiration}}.",
+        "updateEmailAddress": "Para actualizar tu cuenta de {{realmName}} con la dirección de correo electrónico {{newEmail}}",
+        "clickLinkBelow": "haz clic en el enlace a continuación",
+        "updateEmail": "Actualizar correo electrónico",
+        "ignoreMessage": "Si no deseas continuar con esta modificación, simplemente ignora este mensaje."
+    },
+    "email-verification": {
+        "subject": "Verificar correo electrónico",
+        "message": "Alguien creó una cuenta de {{firstName}} con esta dirección de correo electrónico. Si fuiste tú, haz clic en el enlace a continuación para verificar tu dirección de correo electrónico.",
+        "verifyButton": "Verificar correo electrónico",
+        "linkExpiration": "Este enlace caducará en {{expiration}}.",
+        "ignoreMessage": "Si no creaste esta cuenta, simplemente ignora este mensaje."
+    },
+    "event-login_error": {
+        "subject": "Error de inicio de sesión",
+        "message": "Se detectó un intento fallido de inicio de sesión en tu cuenta el {{date}} desde {{ipAddress}}.",
+        "contactAdmin": "Si no fuiste tú, contacta con un administrador."
+    },
+    "event-remove_credential": {
+        "subject": "Eliminar credencial",
+        "message": "La credencial {{credentialType}} fue eliminada de tu cuenta el {{date}} desde {{ipAddress}}.",
+        "contactAdmin": "Si no fuiste tú, contacta con un administrador."
+    },
+    "event-remove_totp": {
+        "subject": "Eliminar OTP",
+        "message": "OTP fue eliminado de tu cuenta el {{date}} desde {{ipAddress}}.",
+        "contactAdmin": "Si no fuiste tú, contacta con un administrador."
+    },
+    "event-update_credential": {
+        "subject": "Actualizar credencial",
+        "message": "Tu credencial {{credentialType}} fue cambiada el {{date}} desde {{ipAddress}}.",
+        "contactAdmin": "Si no fuiste tú, contacta con un administrador."
+    },
+    "event-update_password": {
+        "subject": "Actualizar contraseña",
+        "message": "Tu contraseña fue cambiada el {{date}} desde {{ipAddress}}.",
+        "contactAdmin": "Si no fuiste tú, contacta con un administrador."
+    },
+    "event-update_totp": {
+        "subject": "Actualizar OTP",
+        "message": "OTP fue actualizado para tu cuenta el {{date}} desde {{ipAddress}}.",
+        "contactAdmin": "Si no fuiste tú, contacta con un administrador."
+    },
+    "event-user_disabled_by_permanent_lockout": {
+        "subject": "Usuario deshabilitado por bloqueo permanente",
+        "message": "Tu usuario ha sido deshabilitado permanentemente debido a múltiples intentos fallidos el {{date}}.",
+        "contactAdmin": "Por favor, contacta con un administrador."
+    },
+    "event-user_disabled_by_temporary_lockout": {
+        "subject": "Usuario deshabilitado por bloqueo temporal",
+        "message": "Tu usuario ha sido deshabilitado temporalmente debido a múltiples intentos fallidos el {{date}}.",
+        "contactAdmin": "Por favor, contacta con un administrador."
+    },
+    "executeActions": {
+        "subject": "Actualiza tu cuenta",
+        "message": "Tu administrador acaba de solicitar que actualices tu cuenta de {{realmName}} realizando la(s) siguiente(s) acción(es):",
+        "clickLink": "Haz clic en el enlace a continuación para iniciar este proceso.",
+        "linkExpiration": "Este enlace caducará en {{expiration}}.",
+        "ignoreMessage": "Si no sabías que tu administrador solicitó esto, simplemente ignora este mensaje y no se cambiará nada.",
+        "updateAccountButton": "Actualizar cuenta"
+    },
+    "identity-provider-link": {
+        "subject": "Vincular {0} con tu cuenta",
+        "message": "Alguien quiere vincular tu cuenta de {{identityProviderDisplayName}} con la cuenta de {{realmName}} del usuario {{username}}.",
+        "clickLink": "Si fuiste tú, haz clic en el enlace a continuación para vincular las cuentas",
+        "linkExpiration": "Este enlace caducará en {{expiration}}.",
+        "ignoreMessage": "Si no deseas continuar con esta modificación, simplemente ignora este mensaje.",
+        "linkAccountsButton": "Vincular cuentas",
+        "loginInfo": "Si vinculas las cuentas, podrás iniciar sesión en {{identityProviderDisplayName}} a través de {{realmName}}."
+    },
+    "org-invite": {
+        "subject": "Invitación para unirte a la organización {0}",
+        "greeting": "Hola, {{firstName}} {{lastName}}.",
+        "message": "Fuiste invitado a unirte a la organización {{organizationName}}. Haz clic en el enlace a continuación para unirte.",
+        "linkExpiration": "Este enlace caducará en {{expiration}}.",
+        "ignoreMessage": "Si no deseas unirte a la organización, simplemente ignora este mensaje.",
+        "joinButton": "Unirse a la organización"
+    },
+    "password-reset": {
+        "subject": "Restablecer contraseña",
+        "message": "Alguien acaba de solicitar cambiar las credenciales de tu cuenta de {{realmName}}. Si fuiste tú, haz clic en el enlace a continuación para restablecerlas.",
+        "linkExpiration": "Este enlace caducará en {{expiration}}.",
+        "ignoreMessage": "Si no deseas restablecer tus credenciales, simplemente ignora este mensaje y no se cambiará nada.",
+        "resetButton": "Restablecer credenciales"
+    },
+    "footer": {
+        "allRightsReserved": "© {{currentYear}} {{realmName}}, Todos los derechos reservados",
+        "address": "Calle Isla de Bizerta 7, 1053, Túnez, Túnez"
+    }
+}

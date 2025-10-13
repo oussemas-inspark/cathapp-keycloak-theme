@@ -59,6 +59,43 @@ const { useI18n, ofTypeI18n } = i18nBuilder
             system: "System",
             copySuccessTitle: "Code in die Zwischenablage kopiert",
             copyErrorTitle: "Fehler beim Kopieren des Codes"
+        },
+        es: {
+            welcomeMessage:
+                "Bienvenido a CathApp: tu solución de confianza para una gestión eficiente de catéteres y coordinación sanitaria.",
+
+            loginAccountTitle: "Iniciar sesión en tu cuenta",
+            registerTitle: "Registrar una nueva cuenta",
+            email: "Dirección de correo electrónico",
+            enterCredentials:
+                "Ingresa tus credenciales a continuación para iniciar sesión",
+            passwordPlaceholder: "Ingresa tu contraseña",
+            noAccount: "¿No tienes una cuenta?",
+            doRegister: "Registrarse",
+            home: "Inicio",
+            dark: "Oscuro",
+            light: "Claro",
+            system: "Sistema",
+            copySuccessTitle: "Código copiado al portapapeles",
+            copyErrorTitle: "Error al copiar el código"
+        },
+        it: {
+            welcomeMessage:
+                "Benvenuto su CathApp: la tua soluzione affidabile per una gestione efficiente dei cateteri e il coordinamento sanitario.",
+
+            loginAccountTitle: "Accedi al tuo account",
+            registerTitle: "Registra un nuovo account",
+            email: "Indirizzo email",
+            enterCredentials: "Inserisci le tue credenziali qui sotto per accedere",
+            passwordPlaceholder: "Inserisci la tua password",
+            noAccount: "Non hai un account?",
+            doRegister: "Registrati",
+            home: "Home",
+            dark: "Scuro",
+            light: "Chiaro",
+            system: "Sistema",
+            copySuccessTitle: "Codice copiato negli appunti",
+            copyErrorTitle: "Errore nella copia del codice"
         }
     })
     .build();

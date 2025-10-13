@@ -24,7 +24,7 @@ export default defineConfig({
                     themeNames: buildContext.themeNames,
                     keycloakifyBuildDirPath: buildContext.keycloakifyBuildDirPath,
                     i18nSourceFile: import.meta.dirname + "/emails/i18n.ts",
-                    locales: ["en", "fr", "de"],
+                    locales: ["en", "fr", "de", "es", "it"],
                     cwd: import.meta.dirname,
                     esbuild: {}
                 });
