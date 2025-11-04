@@ -16,7 +16,9 @@ import shape from "./assets/img/shape.svg";
 import { Languages } from "@/components/langauges";
 import { ModeToggle } from "@/components/theme-toggle";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@radix-ui/react-tooltip';
 import { kcSanitize } from "keycloakify/lib/kcSanitize";
+import { RotateCcw } from 'lucide-react';
 
 export default function Template(props: TemplateProps<KcContext, I18n>) {
     const {
@@ -89,14 +91,23 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                         const node = !(auth !== undefined && auth.showUsername && !auth.showResetCredentials) ? (
                                             <h1 className="text-xl">{headerNode}</h1>
                                         ) : (
-                                            <div id="kc-username" className={kcClsx("kcFormGroupClass")}>
-                                                <label id="kc-attempted-username">{auth.attemptedUsername}</label>
-                                                <a id="reset-login" href={url.loginRestartFlowUrl} aria-label={msgStr("restartLoginTooltip")}>
-                                                    <div className="kc-login-tooltip">
-                                                        <i className={kcClsx("kcResetFlowIcon")}></i>
-                                                        <span className="kc-tooltip-text">{msg("restartLoginTooltip")}</span>
-                                                    </div>
-                                                </a>
+                                            <div id="kc-username" className='flex items-center justify-center gap-2'>
+                                                <label className='font-semibold text-lg' id="kc-attempted-username">{auth.attemptedUsername}</label>
+
+                                                <TooltipProvider>
+                                                    <Tooltip>
+                                                        <TooltipTrigger asChild>
+                                                            <Button variant="outline" size="icon" asChild>
+                                                                <a id="reset-login" href={url.loginRestartFlowUrl} aria-label={msgStr("restartLoginTooltip")}>
+                                                                    <RotateCcw className="h-4 w-4" />
+                                                                </a>
+                                                            </Button>
+                                                        </TooltipTrigger>
+                                                        <TooltipContent>
+                                                            <p>{msg("restartLoginTooltip")}</p>
+                                                        </TooltipContent>
+                                                    </Tooltip>
+                                                </TooltipProvider>
                                             </div>
                                         );
 
