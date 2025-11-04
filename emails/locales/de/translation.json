@@ -97,6 +97,13 @@
         "ignoreMessage": "Wenn Sie Ihre Anmeldeinformationen nicht zurücksetzen möchten, ignorieren Sie bitte diese Nachricht. Es werden keine Änderungen vorgenommen.",
         "resetButton": "Anmeldeinformationen zurücksetzen"
     },
+    "verify-hospital-code": {
+        "verifyHospitalCodeSubject": "Verifizieren Sie Ihren Krankenhauscode",
+        "verifyHospitalCodeBody": "Hallo {{0}},",
+        "verifyHospitalCodeMessage": "Bitte verwenden Sie den folgenden Code, um Ihre Krankenhauszugehörigkeit zu verifizieren:",
+        "verifyHospitalCodeInstructions": "Alternativ können Sie auf die Schaltfläche unten klicken, um den Verifizierungsprozess abzuschließen:",
+        "verifyHospitalCodeButton": "Krankenhauscode verifizieren"
+    },
     "footer": {
         "allRightsReserved": "© {{currentYear}} {{realmName}}, alle Rechte vorbehalten",
         "address": "7 Rue de Lille, Bizerte, 1053, Tunis, Tunesien"

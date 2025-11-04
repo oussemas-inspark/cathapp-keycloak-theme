@@ -97,6 +97,13 @@
         "ignoreMessage": "Si vous ne souhaitez pas réinitialiser vos informations d'identification, ignorez simplement ce message et rien ne changera.",
         "resetButton": "Réinitialiser le mot de passe"
     },
+    "verify-hospital-code": {
+        "verifyHospitalCodeSubject": "Vérifiez votre code d'hôpital",
+        "verifyHospitalCodeBody": "Bonjour {{0}},",
+        "verifyHospitalCodeMessage": "Veuillez utiliser le code suivant pour vérifier votre affiliation hospitalière :",
+        "verifyHospitalCodeInstructions": "Vous pouvez également cliquer sur le bouton ci-dessous pour terminer le processus de vérification :",
+        "verifyHospitalCodeButton": "Vérifier le code de l'hôpital"
+    },
     "footer": {
         "allRightsReserved": "© {{currentYear}} {{realmName}}, Tous droits réservés",
         "address": "7 rue de l'île de Bizerte, 1053, Tunis, Tunisie"

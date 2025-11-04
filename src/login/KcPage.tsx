@@ -11,6 +11,7 @@ const UserProfileFormFields = lazy(() => import("./UserProfileFormFields"));
 const Login = lazy(() => import("./pages/Login"));
 const LoginPassword = lazy(() => import("./pages/LoginPassword"));
 const LoginUsername = lazy(() => import("./pages/LoginUsername"));
+const VerifyHospitalCode = lazy(() => import("./pages/VerifyHospitalCode"));
 const Register = lazy(() => import("./pages/Register"));
 const Terms = lazy(() => import("./pages/Terms"));
 const LoginOauth2DeviceVerifyUserCode = lazy(
@@ -54,7 +55,7 @@ const DeleteAccountConfirm = lazy(() => import("./pages/DeleteAccountConfirm"));
 const LoginUpdatePassword = lazy(() => import("./pages/LoginUpdatePassword"));
 const LoginVerifyEmail = lazy(() => import("./pages/LoginVerifyEmail"));
 const Code = lazy(() => import("./pages/Code"));
-const SelectOrganization = lazy(() => import("./pages/SelectOrganization"));
+const SelectOrganization = lazy(() => import("./pages/SelectOrganization")); 
 
 
 const doMakeUserConfirmPassword = true;
@@ -377,13 +378,22 @@ export default function KcPage(props: { kcContext: KcContext }) {
                                     doUseDefaultCss={doUseDefaultCss}
                                 />
                             );
-                        case "select-organization.ftl": return (
-                            <SelectOrganization
-                                {...{ kcContext, i18n, classes }}
-                                Template={Template}
-                                doUseDefaultCss={doUseDefaultCss}
-                            />
-                        );
+                        case "select-organization.ftl": 
+                            return (
+                                <SelectOrganization
+                                    {...{ kcContext, i18n, classes }}
+                                    Template={Template}
+                                    doUseDefaultCss={doUseDefaultCss}
+                                />
+                            );
+                        case "verify-hospital-code.ftl": 
+                            return (
+                                <VerifyHospitalCode 
+                                    {...{ kcContext, i18n, classes }} 
+                                    Template={Template} 
+                                    doUseDefaultCss={true} 
+                                />
+                            );
                         default:
                             return (
                                 <DefaultPage

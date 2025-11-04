@@ -97,6 +97,13 @@
         "ignoreMessage": "Si no deseas restablecer tus credenciales, simplemente ignora este mensaje y no se cambiará nada.",
         "resetButton": "Restablecer credenciales"
     },
+    "verify-hospital-code": {
+        "verifyHospitalCodeSubject": "Verifica tu código de hospital",
+        "verifyHospitalCodeBody": "Hola {{0}},",
+        "verifyHospitalCodeMessage": "Por favor, usa el siguiente código para verificar tu afiliación hospitalaria:",
+        "verifyHospitalCodeInstructions": "Alternativamente, puedes hacer clic en el botón de abajo para completar el proceso de verificación:",
+        "verifyHospitalCodeButton": "Verificar código de hospital"
+    },
     "footer": {
         "allRightsReserved": "© {{currentYear}} {{realmName}}, Todos los derechos reservados",
         "address": "Calle Isla de Bizerta 7, 1053, Túnez, Túnez"

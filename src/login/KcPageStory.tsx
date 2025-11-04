@@ -17,7 +17,9 @@ const kcContextExtension: KcContextExtension = {
         baseUrl: "https://my-theme.keycloakify.dev"
     }
 };
-const kcContextExtensionPerPage: KcContextExtensionPerPage = {};
+const kcContextExtensionPerPage: KcContextExtensionPerPage = {
+    "verify-hospital-code.ftl": {}
+};
 
 export const { getKcContextMock } = createGetKcContextMock({
     kcContextExtension,
