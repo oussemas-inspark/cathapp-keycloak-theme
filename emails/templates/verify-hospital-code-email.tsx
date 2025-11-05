@@ -62,14 +62,11 @@ export const Template = ({ locale, t }: TemplateProps) => {
                 {t("verifyHospitalCodeMessage")}
             </Text>
 
-            {/* 
-        This is where we render the custom 'hospitalCode' attribute
-        that our CustomEmailTemplateProvider.java SPI added.
-        We use dangerouslySetInnerHTML to inject the FreeMarker variable directly
-      */}
             <div
                 style={codeBox}
-                dangerouslySetInnerHTML={{ __html: "${hospitalCode!''}" }}
+                dangerouslySetInnerHTML={{
+                    __html: "${user.attributes.hospital_code[0]!''}"
+                }}
             />
 
             <Text style={applyRTL(paragraph, isRTL, rtlStyle)}>

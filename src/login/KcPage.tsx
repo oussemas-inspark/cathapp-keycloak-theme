@@ -391,7 +391,7 @@ export default function KcPage(props: { kcContext: KcContext }) {
                                 <VerifyHospitalCode 
                                     {...{ kcContext, i18n, classes }} 
                                     Template={Template} 
-                                    doUseDefaultCss={true} 
+                                    doUseDefaultCss={doUseDefaultCss}
                                 />
                             );
                         default:
