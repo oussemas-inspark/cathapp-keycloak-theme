@@ -71,7 +71,8 @@
         "clickLink": "Haz clic en el enlace a continuación para iniciar este proceso.",
         "linkExpiration": "Este enlace caducará en {{expiration}}.",
         "ignoreMessage": "Si no sabías que tu administrador solicitó esto, simplemente ignora este mensaje y no se cambiará nada.",
-        "updateAccountButton": "Actualizar cuenta"
+        "updateAccountButton": "Actualizar cuenta",
+        "hospitalCodeLabel": "Tu código de verificación hospitalaria es:"
     },
     "identity-provider-link": {
         "subject": "Vincular {0} con tu cuenta",

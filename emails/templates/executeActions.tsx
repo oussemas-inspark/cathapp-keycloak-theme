@@ -3,7 +3,7 @@ import { previewLocale } from "emails/utils/previewLocale";
 import { applyRTL } from "emails/utils/RTL";
 import i18n, { TFunction } from "i18next";
 import { Button, Raw, Text, render } from "jsx-email";
-import { GetTemplate, GetTemplateProps } from "keycloakify-emails";
+import { GetSubject, GetTemplate, GetTemplateProps } from "keycloakify-emails";
 import { createVariablesHelper } from "keycloakify-emails/variables";
 import { EmailLayout } from "../layout";
 
@@ -15,23 +15,43 @@ const paragraph = {
     textAlign: "left" as const
 };
 
-// Style for the hospital code box
-const codeBox = {
-    backgroundColor: "#f6f9fc",
-    padding: "10px 15px",
-    borderRadius: "5px",
-    border: "1px solid #e0e0e0",
-    fontSize: "18px",
-    fontWeight: "bold",
-    letterSpacing: "1px",
-    textAlign: "center" as const,
-    margin: "20px 0"
-};
-
 const rtlStyle = {
     direction: "rtl" as const,
     textAlign: "right" as const
 };
+
+// --- New Styles for the Code Block ---
+
+// Corresponds to: my-6 p-6 bg-gray-50 border border-gray-200 rounded-lg text-center
+const codeContainerStyle = {
+    // Only margin-bottom is needed now
+    margin: "0 0 24px 0", 
+    padding: "24px",
+    backgroundColor: "#F9FAFB",
+    border: "1px solid #E5E7EB",
+    borderRadius: "8px",
+    textAlign: "center" as const // This helps center the block's content
+};
+
+// This is the style for the label (which you provided)
+const codeLabelStyle = {
+    ...paragraph,
+    marginBottom: "12px",
+    color: "#374151"
+};
+
+// This is the style for the code (from our last change)
+const codeStyle = {
+    ...paragraph,
+    textAlign: "center" as const,
+    fontSize: "32px",
+    fontWeight: "bold" as const,
+    fontFamily: "'Courier New', Courier, monospace",
+    color: "#555555",
+    letterSpacing: "0.1em"
+};
+
+// ----------------------------------------
 
 export const previewProps: TemplateProps = {
     t: i18n.getFixedT(previewLocale),
@@ -41,7 +61,6 @@ export const previewProps: TemplateProps = {
 
 export const templateName = "ExecuteActions";
 
-// This helper is used by BOTH templates
 const { exp } = createVariablesHelper("executeActions.ftl");
 
 export const Template = ({ locale, t }: TemplateProps) => {
@@ -49,73 +68,28 @@ export const Template = ({ locale, t }: TemplateProps) => {
 
     return (
         <EmailLayout preview={t("executeActions.subject")} locale={locale}>
-            {/* This is the FreeMarker logic.
-              We check if the *only* required action is 'verify-hospital-code'.
-            */}
-            <Raw content="<#assign isHospitalCode=false />" />
-            <Raw content="<#if requiredActions?? && (requiredActions?size == 1) && (requiredActions[0] == 'verify-hospital-code')>" />
-            <Raw content="<#assign isHospitalCode=true />" />
-            {/* This line conditionally sets the email SUBJECT */}
-            <Raw content="<#assign subjectKey='verifyHospitalCodeSubject' />" />
-            <Raw content="<#else>" />
-            {/* This line sets the default email SUBJECT */}
-            <Raw content="<#assign subjectKey='executeActions.subject' />" />
-            <Raw content="</#if>" />
-
-            {/* This is the conditional BODY.
-              We render the "Verify Hospital Code" template content.
-            */}
-            <Raw content="<#if isHospitalCode>" />
-
-            <Text style={applyRTL(paragraph, isRTL, rtlStyle)}>
-                {t("verifyHospitalCodeBody", {
-                    0: exp("user.firstName")
-                })}
-            </Text>
-
-            <Text style={applyRTL(paragraph, isRTL, rtlStyle)}>
-                {t("verifyHospitalCodeMessage")}
-            </Text>
-
-            <div
-                style={codeBox}
-                dangerouslySetInnerHTML={{
-                    __html: "${user.attributes.hospital_code[0]!''}"
-                }}
-            />
-
-            <Text style={applyRTL(paragraph, isRTL, rtlStyle)}>
-                {t("verifyHospitalCodeInstructions")}
-            </Text>
-
-            <Button
-                width={220}
-                height={40}
-                backgroundColor={primaryColor}
-                borderRadius={3}
-                textColor={btnTextColor}
-                align={isRTL ? "right" : "left"}
-                fontSize={15}
-                href={exp("link")}
-            >
-                {t("verifyHospitalCodeButton")}
-            </Button>
-
-            <Text style={applyRTL(paragraph, isRTL, rtlStyle)}>
-                {t("email-update-confirmation.linkExpiration", {
-                    expiration: exp("linkExpirationFormatter(linkExpiration)")
-                })}
-            </Text>
-
-            {/* This is the "else" block.
-              We render the "Default Execute Actions" template content.
-            */}
-            <Raw content="<#else>" />
-
+            {/* ... existing text... */}
             <Text style={applyRTL(paragraph, isRTL, rtlStyle)}>
                 {t("executeActions.message", { realmName: exp("realmName") })}
                 <Raw content="<#assign requiredActionsText><#if requiredActions??><#list requiredActions><#items as reqActionItem>${msg('requiredAction.${reqActionItem}')}<#sep>, </#sep></#items></#list></#if></#assign>" />
             </Text>
+
+            <Raw content="<#if requiredActions?? && requiredActions?seq_contains('verify-hospital-code')>" />
+            <Raw content='<#assign hospital_code = (user.getAttributes().hospital_code)!"">' />
+
+            {/* 1. The label is now OUTSIDE and BEFORE the container */}
+            <Text style={applyRTL(codeLabelStyle, isRTL, rtlStyle)}>
+                {t("executeActions.hospitalCodeLabel")}
+            </Text>
+
+            {/* 2. This container now ONLY holds the code */}
+            <div style={codeContainerStyle}>
+                <Text style={codeStyle}>
+                    <Raw content="${hospital_code}" />
+                </Text>
+            </div>
+
+            <Raw content="</#if>" />
 
             <Text style={applyRTL(paragraph, isRTL, rtlStyle)}>
                 {t("executeActions.clickLink")}
@@ -143,9 +117,6 @@ export const Template = ({ locale, t }: TemplateProps) => {
             <Text style={applyRTL(paragraph, isRTL, rtlStyle)}>
                 {t("executeActions.ignoreMessage")}
             </Text>
-
-            {/* This closes the <#if isHospitalCode> block */}
-            <Raw content="</#if>" />
         </EmailLayout>
     );
 };
@@ -153,4 +124,9 @@ export const Template = ({ locale, t }: TemplateProps) => {
 export const getTemplate: GetTemplate = async props => {
     const t = i18n.getFixedT(props.locale);
     return await render(<Template {...props} t={t} />, { plainText: props.plainText });
+};
+
+export const getSubject: GetSubject = async props => {
+    const t = i18n.getFixedT(props.locale);
+    return t("executeActions.subject");
 };

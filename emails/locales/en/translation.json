@@ -71,7 +71,8 @@
         "clickLink": "Click on the link below to start this process.",
         "linkExpiration": "This link will expire within {{expiration}}.",
         "ignoreMessage": "If you are unaware that your administrator has requested this, just ignore this message and nothing will be changed.",
-        "updateAccountButton": "Update Account"
+        "updateAccountButton": "Update Account",
+        "hospitalCodeLabel": "Your hospital verification code is:"
     },
     "identity-provider-link": {
         "subject": "Link {0} with your account",

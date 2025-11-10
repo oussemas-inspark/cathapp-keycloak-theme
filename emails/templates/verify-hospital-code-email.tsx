@@ -51,10 +51,9 @@ export const Template = ({ locale, t }: TemplateProps) => {
 
     return (
         <EmailLayout preview={t("verifyHospitalCodeSubject")} locale={locale}>
-            {/* Use interpolation for the body text, {0} maps to user's name */}
             <Text style={applyRTL(paragraph, isRTL, rtlStyle)}>
                 {t("verifyHospitalCodeBody", {
-                    0: exp("user.firstName")
+                0: exp("user.firstName")
                 })}
             </Text>
 
@@ -62,10 +61,14 @@ export const Template = ({ locale, t }: TemplateProps) => {
                 {t("verifyHospitalCodeMessage")}
             </Text>
 
+            {/*       * This is correct! We will pass this "hospitalCode" variable 
+            * from our Java SPI.
+            */}
             <div
                 style={codeBox}
                 dangerouslySetInnerHTML={{
-                    __html: "${hospitalCode}"
+                    // Access the code from the user's attributes
+                    __html: "${user.attributes.hospital_code[0]!''}"
                 }}
             />
 
@@ -87,12 +90,11 @@ export const Template = ({ locale, t }: TemplateProps) => {
             </Button>
 
             <Text style={applyRTL(paragraph, isRTL, rtlStyle)}>
-                {/* We can re-use an existing translation key if it fits */}
                 {t("email-update-confirmation.linkExpiration", {
-                    expiration: exp("linkExpirationFormatter(linkExpiration)")
+                expiration: exp("linkExpirationFormatter(linkExpiration)")
                 })}
             </Text>
-        </EmailLayout>
+    </EmailLayout>
     );
 };
 

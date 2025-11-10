@@ -71,7 +71,8 @@
         "clickLink": "Clicca sul link qui sotto per avviare questo processo.",
         "linkExpiration": "Questo link scadrà entro {{expiration}}.",
         "ignoreMessage": "Se non sei a conoscenza che il tuo amministratore ha richiesto ciò, ignora semplicemente questo messaggio e nulla verrà modificato.",
-        "updateAccountButton": "Aggiorna account"
+        "updateAccountButton": "Aggiorna account",
+        "hospitalCodeLabel": "Il tuo codice di verifica ospedaliera è:"
     },
     "identity-provider-link": {
         "subject": "Collega {0} con il tuo account",
