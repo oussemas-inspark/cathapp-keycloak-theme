@@ -26,7 +26,7 @@ export default function Terms(props: PageProps<Extract<KcContext, { pageId: "ter
             headerNode={msg("termsTitle")}
         >
             <div className="space-y-6">
-                <div id="kc-terms-text" className="p-4 bg-muted/50 rounded-lg max-h-64 overflow-y-auto text-sm leading-relaxed">
+                <div id="kc-terms-text" className="p-4 bg-muted/50 rounded-lg max-h-96 overflow-y-auto text-sm leading-relaxed">
                     {msg("termsText")}
                 </div>
 
