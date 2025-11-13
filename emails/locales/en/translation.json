@@ -71,7 +71,8 @@
         "clickLink": "Click on the link below to start this process.",
         "linkExpiration": "This link will expire within {{expiration}}.",
         "ignoreMessage": "If you are unaware that your administrator has requested this, just ignore this message and nothing will be changed.",
-        "updateAccountButton": "Update Account"
+        "updateAccountButton": "Update Account",
+        "hospitalCodeLabel": "Your hospital verification code is:"
     },
     "identity-provider-link": {
         "subject": "Link {0} with your account",
@@ -96,6 +97,13 @@
         "linkExpiration": "This link will expire within {{expiration}}.",
         "ignoreMessage": "If you don't want to reset your credentials, just ignore this message and nothing will be changed.",
         "resetButton": "Reset credentials"
+    },
+    "verify-hospital-code": {
+        "verifyHospitalCodeSubject": "Verify Your Hospital Code",
+        "verifyHospitalCodeBody": "Hello {{0}},",
+        "verifyHospitalCodeMessage": "Please use the following code to verify your hospital affiliation:",
+        "verifyHospitalCodeInstructions": "Alternatively, you can click the button below to complete the verification process:",
+        "verifyHospitalCodeButton": "Verify Hospital Code"
     },
     "footer": {
         "allRightsReserved": "© {{currentYear}} {{realmName}}, All Rights Reserved",

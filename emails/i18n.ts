@@ -54,6 +54,7 @@ export const getMessages: GetMessages = props => {
             "requiredAction.VERIFY_EMAIL": "E-Mail-Adresse bestätigen",
             "requiredAction.CONFIGURE_RECOVERY_AUTHN_CODES":
                 "Wiederherstellungscodes generieren",
+            "requiredAction.verify-hospital-code": "Krankenhauscode verifizieren",
 
             "linkExpirationFormatter.timePeriodUnit.seconds":
                 "{0,choice,0#Sekunden|1#Sekunde|1<Sekunden}",
@@ -73,6 +74,7 @@ export const getMessages: GetMessages = props => {
             "requiredAction.VERIFY_EMAIL": "Vérifier l'email",
             "requiredAction.CONFIGURE_RECOVERY_AUTHN_CODES":
                 "Générer des codes de récupération",
+            "requiredAction.verify-hospital-code": "Vérifier le code de l'hôpital",
 
             "linkExpirationFormatter.timePeriodUnit.seconds":
                 "{0,choice,0#secondes|1#seconde|1<secondes}",
@@ -92,6 +94,7 @@ export const getMessages: GetMessages = props => {
             "requiredAction.VERIFY_EMAIL": "Verificar correo electrónico",
             "requiredAction.CONFIGURE_RECOVERY_AUTHN_CODES":
                 "Generar códigos de recuperación",
+            "requiredAction.verify-hospital-code": "Verificar código de hospital",
 
             "linkExpirationFormatter.timePeriodUnit.seconds":
                 "{0,choice,0#segundos|1#segundo|1<segundos}",
@@ -110,6 +113,7 @@ export const getMessages: GetMessages = props => {
             "requiredAction.UPDATE_PROFILE": "Aggiorna profilo",
             "requiredAction.VERIFY_EMAIL": "Verifica email",
             "requiredAction.CONFIGURE_RECOVERY_AUTHN_CODES": "Genera codici di recupero",
+            "requiredAction.verify-hospital-code": "Verifica codice ospedaliero",
 
             "linkExpirationFormatter.timePeriodUnit.seconds":
                 "{0,choice,0#secondi|1#secondo|1<secondi}",
@@ -128,6 +132,7 @@ export const getMessages: GetMessages = props => {
             "requiredAction.UPDATE_PROFILE": "Update Profile",
             "requiredAction.VERIFY_EMAIL": "Verify Email",
             "requiredAction.CONFIGURE_RECOVERY_AUTHN_CODES": "Generate Recovery Codes",
+            "requiredAction.verify-hospital-code": "Verify Hospital Code",
 
             "linkExpirationFormatter.timePeriodUnit.seconds":
                 "{0,choice,0#seconds|1#second|1<seconds}",

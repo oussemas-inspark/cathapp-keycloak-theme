@@ -10,6 +10,11 @@ export type KcContextExtension = {
     };
 };
 
-export type KcContextExtensionPerPage = {};
+export type KcContextExtensionPerPage = {
+    "verify-hospital-code.ftl": {
+        // Add any custom context properties for this page if needed
+        // These are optional and will be used for Storybook mocking
+    };
+};
 
 export type KcContext = ExtendKcContext<KcContextExtension, KcContextExtensionPerPage>;

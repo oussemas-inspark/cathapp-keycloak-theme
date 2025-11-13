@@ -71,7 +71,8 @@
         "clickLink": "Klicken Sie auf den untenstehenden Link, um diesen Vorgang zu starten.",
         "linkExpiration": "Dieser Link läuft in {{expiration}} ab.",
         "ignoreMessage": "Wenn Sie diese Anfrage nicht erwartet haben, ignorieren Sie bitte diese Nachricht. Es werden keine Änderungen vorgenommen.",
-        "updateAccountButton": "Konto aktualisieren"
+        "updateAccountButton": "Konto aktualisieren",
+        "hospitalCodeLabel": "Ihr Krankenhausverifizierungscode lautet:"
     },
     "identity-provider-link": {
         "subject": "Verknüpfung mit Ihrem {0}-Konto",
@@ -96,6 +97,13 @@
         "linkExpiration": "Dieser Link läuft in {{expiration}} ab.",
         "ignoreMessage": "Wenn Sie Ihre Anmeldeinformationen nicht zurücksetzen möchten, ignorieren Sie bitte diese Nachricht. Es werden keine Änderungen vorgenommen.",
         "resetButton": "Anmeldeinformationen zurücksetzen"
+    },
+    "verify-hospital-code": {
+        "verifyHospitalCodeSubject": "Verifizieren Sie Ihren Krankenhauscode",
+        "verifyHospitalCodeBody": "Hallo {{0}},",
+        "verifyHospitalCodeMessage": "Bitte verwenden Sie den folgenden Code, um Ihre Krankenhauszugehörigkeit zu verifizieren:",
+        "verifyHospitalCodeInstructions": "Alternativ können Sie auf die Schaltfläche unten klicken, um den Verifizierungsprozess abzuschließen:",
+        "verifyHospitalCodeButton": "Krankenhauscode verifizieren"
     },
     "footer": {
         "allRightsReserved": "© {{currentYear}} {{realmName}}, alle Rechte vorbehalten",

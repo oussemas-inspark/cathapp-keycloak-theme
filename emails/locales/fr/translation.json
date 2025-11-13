@@ -71,7 +71,8 @@
         "clickLink": "Cliquez sur le lien ci-dessous pour commencer ce processus.",
         "linkExpiration": "Ce lien expirera dans {{expiration}}.",
         "ignoreMessage": "Si vous n'êtes pas au courant que votre administrateur a demandé cela, ignorez simplement ce message et rien ne changera.",
-        "updateAccountButton": "Mettre à jour le compte"
+        "updateAccountButton": "Mettre à jour le compte",
+        "hospitalCodeLabel": "Votre code de vérification hospitalière est :"
     },
     "identity-provider-link": {
         "subject": "Lier {0} avec votre compte",
@@ -96,6 +97,13 @@
         "linkExpiration": "Ce lien expirera dans {{expiration}}.",
         "ignoreMessage": "Si vous ne souhaitez pas réinitialiser vos informations d'identification, ignorez simplement ce message et rien ne changera.",
         "resetButton": "Réinitialiser le mot de passe"
+    },
+    "verify-hospital-code": {
+        "verifyHospitalCodeSubject": "Vérifiez votre code d'hôpital",
+        "verifyHospitalCodeBody": "Bonjour {{0}},",
+        "verifyHospitalCodeMessage": "Veuillez utiliser le code suivant pour vérifier votre affiliation hospitalière :",
+        "verifyHospitalCodeInstructions": "Vous pouvez également cliquer sur le bouton ci-dessous pour terminer le processus de vérification :",
+        "verifyHospitalCodeButton": "Vérifier le code de l'hôpital"
     },
     "footer": {
         "allRightsReserved": "© {{currentYear}} {{realmName}}, Tous droits réservés",

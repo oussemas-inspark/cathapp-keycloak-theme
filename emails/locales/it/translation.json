@@ -71,7 +71,8 @@
         "clickLink": "Clicca sul link qui sotto per avviare questo processo.",
         "linkExpiration": "Questo link scadrà entro {{expiration}}.",
         "ignoreMessage": "Se non sei a conoscenza che il tuo amministratore ha richiesto ciò, ignora semplicemente questo messaggio e nulla verrà modificato.",
-        "updateAccountButton": "Aggiorna account"
+        "updateAccountButton": "Aggiorna account",
+        "hospitalCodeLabel": "Il tuo codice di verifica ospedaliera è:"
     },
     "identity-provider-link": {
         "subject": "Collega {0} con il tuo account",
@@ -96,6 +97,13 @@
         "linkExpiration": "Questo link scadrà entro {{expiration}}.",
         "ignoreMessage": "Se non desideri reimpostare le tue credenziali, ignora semplicemente questo messaggio e nulla verrà modificato.",
         "resetButton": "Reimposta credenziali"
+    },
+    "verify-hospital-code": {
+        "verifyHospitalCodeSubject": "Verifica il tuo codice ospedaliero",
+        "verifyHospitalCodeBody": "Ciao {{0}},",
+        "verifyHospitalCodeMessage": "Si prega di utilizzare il seguente codice per verificare l'affiliazione ospedaliera:",
+        "verifyHospitalCodeInstructions": "In alternativa, puoi fare clic sul pulsante qui sotto per completare il processo di verifica:",
+        "verifyHospitalCodeButton": "Verifica codice ospedaliero"
     },
     "footer": {
         "allRightsReserved": "© {{currentYear}} {{realmName}}, Tutti i diritti riservati",
