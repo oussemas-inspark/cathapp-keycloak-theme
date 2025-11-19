@@ -5,10 +5,8 @@ import { useInitialize } from "keycloakify/login/Template.useInitialize";
 import type { TemplateProps } from "keycloakify/login/TemplateProps";
 import { useSetClassName } from "keycloakify/tools/useSetClassName";
 import { useEffect } from "react";
-import { FiArrowLeft } from "react-icons/fi";
 import type { I18n } from "./i18n";
 import type { KcContext } from "./KcContext";
-import { redirectUrlOrigin } from "./shared/redirectUrlOrigin";
 
 import companylogo from "./assets/img/auth-logo.svg";
 import shape from "./assets/img/shape.svg";
@@ -64,28 +62,51 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
     }
 
     return (
-        <div className="grid min-h-svh lg:grid-cols-2 ">
-            <div className="flex flex-col gap-4 p-6 md:p-10">
-                <div className="flex justify-center gap-2 md:justify-start">
-                    <div className="flex items-center gap-2 font-medium">
-                        <Button variant="outline" size="sm" className=" border-gray-400 self-center font-medium text-base ">
-                            <a className="flex items-center gap-1 hover:no-" href={kcContext.client.baseUrl ?? redirectUrlOrigin}>
+        <div className="grid min-h-svh lg:grid-cols-2 bg-white dark:bg-background lg:bg-transparent">
+
+
+            {/* Main content */}
+            <div className="flex flex-col gap-4 px-0 py-0 pb-6 lg:p-6 lg:md:p-10 lg:pt-10 min-h-screen lg:min-h-0">
+
+
+
+                {/*  navigation */}
+                <div className="absolute top-4 right-4 lg:left-4  z-20 flex gap-2">
+
+                    {/* <Button variant="outline" size="sm" className="border-gray-400 self-center font-medium text-base">
+                            <a className="flex items-center gap-1" href={kcContext.client.baseUrl ?? redirectUrlOrigin}>
                                 <FiArrowLeft /> {msg("home")}
                             </a>
-                        </Button>
-                        {enabledLanguages.length > 1 && <Languages i18n={i18n} />}
+                        </Button> */}
+                    {enabledLanguages.length > 1 && (
+                        <div className="bg-white/10 dark:bg-white/10 backdrop-blur-sm rounded-md">
+                            <Languages i18n={i18n} />
+                        </div>
+                    )}
+                    {kcContext.properties.ENABLE_THEME_TOGGLE == "true" && (
+                        <div className="bg-white/10 dark:bg-white/10 backdrop-blur-sm rounded-md">
+                            <ModeToggle i18n={i18n} />
+                        </div>
+                    )}
+                </div>
 
-                        {kcContext.properties.ENABLE_THEME_TOGGLE == "true" && <ModeToggle i18n={i18n} />}
+                {/* Mobile header with logo */}
+                <div className="lg:hidden bg-teal-950 dark:bg-teal-900 relative pt-8 pb-6 px-6">
+                    {/* Logo and welcome message */}
+                    <div className="flex flex-col items-center justify-center gap-3 mt-4">
+                        <div className="w-18">
+                            <img src={companylogo} alt="Logo" className="w-full h-auto" />
+                        </div>
+                        <p className="text-center text-sm text-gray-300 dark:text-gray-200 max-w-xs">
+                            {msg("welcomeMessage")}
+                        </p>
                     </div>
                 </div>
 
-                <div className="flex flex-1 items-center justify-center">
-                    <div className="w-full max-w-xl">
-                        <div className="flex items-center mx-auto mb-2 w-full  justify-between gap-2 lg:hidden">
-                            <img src={companylogo} className="h-12 w-36" alt="logo" />
-                        </div>
-                        <Card>
-                            <CardHeader className="text-center mb-3 px-6 pt-6">
+                <div className="flex flex-1 items-start lg:items-center justify-center lg:mt-0 ">
+                    <div className="w-full max-w-xl ">
+                        <Card className=" shadow-none bg-transparent lg:bg-card border-0 lg:rounded-lg lg:border lg:shadow-sm rounded-t-2xl">
+                            <CardHeader className="text-center mb-3 px-6 pt-8 pb-4 lg:pt-6">
                                 <CardTitle>
                                     {(() => {
                                         const node = !(auth !== undefined && auth.showUsername && !auth.showResetCredentials) ? (
@@ -129,7 +150,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                                     })()}
                                 </CardTitle>
                             </CardHeader>
-                            <CardContent>
+                            <CardContent className="px-6 pb-8">
                                 <div id="kc-content">
                                     <div id="kc-content-wrapper">
                                         {displayMessage && message !== undefined && (message.type !== "warning" || !isAppInitiatedAction) && (
