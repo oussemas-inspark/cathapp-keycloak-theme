@@ -4,7 +4,6 @@ import {
     Container,
     Head,
     Html,
-    Img,
     Preview,
     Row,
     Section,
@@ -12,7 +11,7 @@ import {
 } from "jsx-email";
 import { createVariablesHelper } from "keycloakify-emails/variables";
 import { PropsWithChildren, ReactNode } from "react";
-import { companyLogo, primaryColor } from "./constants";
+import { primaryColor } from "./constants";
 import i18n from "./i18n";
 
 const main = {
@@ -31,17 +30,6 @@ const content = {
     padding: "5px 30px 10px 30px"
 };
 
-const logo = {
-    display: "flex",
-    justifyContent: "center",
-    alingItems: "center",
-    padding: 30
-};
-
-const sectionsBorders = {
-    width: "100%",
-    display: "flex"
-};
 const sectionsBordersBottom = {
     width: "100%",
     display: "flex",
@@ -80,17 +68,6 @@ export const EmailLayout = ({
             <Preview>{preview}</Preview>
             <Body style={main}>
                 <Container style={container}>
-                    <Section style={logo}>
-                        <Img width={200} src={companyLogo} />
-                    </Section>
-
-                    <Section style={sectionsBorders}>
-                        <Row>
-                            <Column style={sectionBorder} />
-                            <Column style={sectionCenter} />
-                            <Column style={sectionBorder} />
-                        </Row>
-                    </Section>
 
                     <Section style={content}>{children}</Section>
 

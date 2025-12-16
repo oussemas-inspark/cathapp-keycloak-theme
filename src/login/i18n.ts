@@ -8,7 +8,7 @@ const { useI18n, ofTypeI18n } = i18nBuilder
     .withCustomTranslations({
         en: {
             welcomeMessage:
-                "Welcome to CathApp – Your trusted solution for efficient catheter management and healthcare coordination.",
+                "Welcome to InfuGuard – Your trusted solution for efficient catheter management and healthcare coordination.",
 
             loginAccountTitle: "Login to your account",
             registerTitle: "Register a new account",
@@ -34,7 +34,7 @@ const { useI18n, ofTypeI18n } = i18nBuilder
         },
         fr: {
             welcomeMessage:
-                "Bienvenue sur CathApp – Votre solution fiable pour la gestion des cathéters et la coordination des soins de santé.",
+                "Bienvenue sur InfuGuard – Votre solution fiable pour la gestion des cathéters et la coordination des soins de santé.",
             loginAccountTitle: "Connectez-vous à votre compte",
             registerTitle: "Créer un nouveau compte",
             email: "Adresse e-mail",
@@ -61,7 +61,7 @@ const { useI18n, ofTypeI18n } = i18nBuilder
         },
         de: {
             welcomeMessage:
-                "Willkommen bei CathApp – Ihre vertrauenswürdige Lösung für effizientes Kathetermanagement und Gesundheitskoordination.",
+                "Willkommen bei InfuGuard – Ihre vertrauenswürdige Lösung für effizientes Kathetermanagement und Gesundheitskoordination.",
 
             loginAccountTitle: "Melden Sie sich bei Ihrem Konto an",
             registerTitle: "Neues Konto erstellen",
@@ -88,7 +88,7 @@ const { useI18n, ofTypeI18n } = i18nBuilder
         },
         es: {
             welcomeMessage:
-                "Bienvenido a CathApp: tu solución de confianza para una gestión eficiente de catéteres y coordinación sanitaria.",
+                "Bienvenido a InfuGuard: tu solución de confianza para una gestión eficiente de catéteres y coordinación sanitaria.",
 
             loginAccountTitle: "Iniciar sesión en tu cuenta",
             registerTitle: "Registrar una nueva cuenta",
@@ -116,7 +116,7 @@ const { useI18n, ofTypeI18n } = i18nBuilder
         },
         it: {
             welcomeMessage:
-                "Benvenuto su CathApp: la tua soluzione affidabile per una gestione efficiente dei cateteri e il coordinamento sanitario.",
+                "Benvenuto su InfuGuard: la tua soluzione affidabile per una gestione efficiente dei cateteri e il coordinamento sanitario.",
 
             loginAccountTitle: "Accedi al tuo account",
             registerTitle: "Registra un nuovo account",

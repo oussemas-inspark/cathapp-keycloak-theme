@@ -8,10 +8,12 @@ import { useEffect } from "react";
 import type { I18n } from "./i18n";
 import type { KcContext } from "./KcContext";
 
-import companylogo from "./assets/img/auth-logo.svg";
+import greenAuthLogo from "./assets/img/auth-logo-green.svg";
+import authLogo from "./assets/img/auth-logo.svg";
 import shape from "./assets/img/shape.svg";
 
 import { Languages } from "@/components/langauges";
+import { useTheme } from '@/components/theme-provider';
 import { ModeToggle } from "@/components/theme-toggle";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@radix-ui/react-tooltip';
@@ -41,6 +43,9 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
 
     const { auth, url, message, isAppInitiatedAction } = kcContext;
 
+    const { theme } = useTheme();
+
+
     useEffect(() => {
         document.title = documentTitle ?? msgStr("loginTitle", kcContext.realm.displayName);
     }, []);
@@ -62,7 +67,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
     }
 
     return (
-        <div className="grid min-h-svh lg:grid-cols-2 bg-white dark:bg-background lg:bg-transparent">
+        <div className="grid min-h-svh lg:grid-cols-2 bg-white dark:bg-[#212936] dark:sm:bg-background lg:bg-transparent">
 
 
             {/* Main content */}
@@ -71,13 +76,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
 
 
                 {/*  navigation */}
-                <div className="absolute top-4 right-4 lg:left-4  z-20 flex gap-2">
-
-                    {/* <Button variant="outline" size="sm" className="border-gray-400 self-center font-medium text-base">
-                            <a className="flex items-center gap-1" href={kcContext.client.baseUrl ?? redirectUrlOrigin}>
-                                <FiArrowLeft /> {msg("home")}
-                            </a>
-                        </Button> */}
+                <div className="absolute top-2 right-2 lg:left-4  z-20 flex gap-2">
                     {enabledLanguages.length > 1 && (
                         <div className="bg-white/10 dark:bg-white/10 backdrop-blur-sm rounded-md">
                             <Languages i18n={i18n} />
@@ -91,13 +90,13 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
                 </div>
 
                 {/* Mobile header with logo */}
-                <div className="lg:hidden bg-teal-950 dark:bg-teal-900 relative pt-8 pb-6 px-6">
+                <div className="lg:hidden  relative pt-8  px-6">
                     {/* Logo and welcome message */}
-                    <div className="flex flex-col items-center justify-center gap-3 mt-4">
+                    <div className="flex flex-col items-center justify-center gap-3 ">
                         <div className="w-18">
-                            <img src={companylogo} alt="Logo" className="w-full h-auto" />
+                            <img src={theme === "light" ? greenAuthLogo : authLogo} alt="Auth Logo" className="w-full h-auto" />
                         </div>
-                        <p className="text-center text-sm text-gray-300 dark:text-gray-200 max-w-xs">
+                        <p className="text-center text-sm  max-w-xs">
                             {msg("welcomeMessage")}
                         </p>
                     </div>
@@ -205,7 +204,7 @@ export default function Template(props: TemplateProps<KcContext, I18n>) {
 
                     <div className="flex justify-center my-auto flex-col items-center max-w-xs">
                         <a className="block mb-4">
-                            <img src={companylogo} alt="Logo" />
+                            <img src={authLogo} alt="Logo" />
                         </a>
                         <p className="text-center  text-gray-400 dark:text-white/60">{msg("welcomeMessage")}</p>
                     </div>
